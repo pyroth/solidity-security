@@ -4,14 +4,6 @@ A curated collection of Foundry-based tests demonstrating common security risks 
 
 The primary goal is educational: to illustrate real-world attack vectors, their exploitation mechanisms, and effective mitigations through clear, executable examples.
 
-## Structure
-
-Each demonstration is implemented as a standalone Foundry test in the `test/` directory. Additional demonstrations will be added progressively.
-
-| Code File                | Documentation File       | Description                                      |
-|--------------------------|--------------------------|--------------------------------------------------|
-| [`test/ApproveScam.t.sol`](test/ApproveScam.t.sol) | [`docs/ApproveScam.md`](docs/ApproveScam.md)    | Over-permissive ERC20 approval risk (unlimited allowance exploitation) |
-
 ## Usage
 
 Run all tests:
@@ -25,6 +17,14 @@ Run a specific test with verbose output:
 ```bash
 forge test --match-path test/ApproveScam.t.sol -vv
 ```
+
+## Structure
+
+Each demonstration is implemented as a standalone Foundry test in the `test/` directory. Additional demonstrations will be added progressively.
+
+| Code File                | Documentation File       | Description                                      |
+|--------------------------|--------------------------|--------------------------------------------------|
+| [`test/ApproveScam.t.sol`](test/ApproveScam.t.sol) | [`docs/ApproveScam.md`](docs/ApproveScam.md)    | Over-permissive ERC20 approval risk (unlimited allowance exploitation) |
 
 ## Inspiration
 
