@@ -1,66 +1,41 @@
-# Foundry
+# Solidity Security Demonstrations
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A curated collection of Foundry-based tests demonstrating common security risks and user-operation vulnerabilities in Solidity smart contracts.
 
-Foundry consists of:
+The primary goal is educational: to illustrate real-world attack vectors, their exploitation mechanisms, and effective mitigations through clear, executable examples.
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Structure
 
-## Documentation
+Each demonstration is implemented as a standalone Foundry test in the `test/` directory. Additional demonstrations will be added progressively.
 
-<https://book.getfoundry.sh/>
+| Code File                | Documentation File       | Description                                      |
+|--------------------------|--------------------------|--------------------------------------------------|
+| [`test/ApproveScam.t.sol`](test/ApproveScam.t.sol) | [`docs/ApproveScam.md`](docs/ApproveScam.md)    | Over-permissive ERC20 approval risk (unlimited allowance exploitation) |
 
 ## Usage
 
-### Build
+Run all tests:
 
-```shell
-forge build
-```
-
-### Test
-
-```shell
+```bash
 forge test
 ```
 
-### Format
+Run a specific test with verbose output:
 
-```shell
-forge fmt
+```bash
+forge test --match-path test/ApproveScam.t.sol -vv
 ```
 
-### Gas Snapshots
+## Inspiration
 
-```shell
-forge snapshot
-```
+Heavily inspired by:
 
-### Anvil
+- [SunWeb3Sec/DeFiVulnLabs](https://github.com/SunWeb3Sec/DeFiVulnLabs)
 
-```shell
-anvil
-```
+## Disclaimer
 
-### Deploy
+This repository contains proof-of-concept code that intentionally demonstrates insecure patterns and exploitation techniques in smart contracts.
 
-```shell
-forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+The content is strictly for educational and research purposes only. It must not be used for any illegal activities, unauthorized access, or exploitation of production systems.
 
-### Cast
-
-```shell
-cast <subcommand>
-```
-
-### Help
-
-```shell
-forge --help
-anvil --help
-cast --help
-```
+Users bear full responsibility for any actions taken based on this material. All usage must comply with applicable laws, regulations, and ethical standards.
