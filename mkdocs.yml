@@ -1,0 +1,100 @@
+# Project information
+site_name: Solidity Security Demonstrations
+site_url: https://gitctrlx.github.io/solidity-security/
+site_author: CtrlX
+site_description: >-
+  A curated collection of Foundry-based tests demonstrating common security risks 
+  and user-operation vulnerabilities in Solidity smart contracts.
+
+# Repository
+repo_url: https://github.com/gitctrlx/solidity-security
+repo_name: gitctrlx/solidity-security
+
+# Copyright
+copyright: >
+  Copyright &copy; 2024 - 2025 CtrlX
+
+# Configuration
+theme:
+  name: material
+  language: en
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: red
+      accent: deep orange
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: red
+      accent: deep orange
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - navigation.footer
+    - navigation.top
+
+# Additional configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gitctrlx
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/GitCtrlX
+
+  generator: false
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+# Page tree
+nav:
+  - Home: index.md
+  - Vulnerabilities:
+      - ApproveScam: ApproveScam.md

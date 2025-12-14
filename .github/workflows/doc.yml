@@ -1,0 +1,10 @@
+name: Doc
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  doc:
+    uses: qntx/workflows/.github/workflows/deploy-mkdocs.yml@main
