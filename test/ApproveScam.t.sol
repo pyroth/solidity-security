@@ -4,13 +4,6 @@ pragma solidity ^0.8.30;
 import "forge-std/Test.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-/// @title Over-Permissive Approval Demonstration
-/// @notice Demonstrates the risk of approving unlimited ERC20 allowances to untrusted addresses.
-/// Alice grants Eve unlimited approval, allowing Eve to drain Alice's entire balance.
-/// @dev This is a user-operation risk, not a contract vulnerability.
-/// Mitigation: Approve only the exact amount required for a transaction.
-/// Consider using permit() extensions for gasless approvals.
-
 contract TestERC20 is ERC20 {
     constructor() ERC20("Test Token", "TEST") {}
 
@@ -20,6 +13,12 @@ contract TestERC20 is ERC20 {
     }
 }
 
+/// @title Over-Permissive Approval Demonstration
+/// @notice Demonstrates the risk of approving unlimited ERC20 allowances to untrusted addresses.
+/// Alice grants Eve unlimited approval, allowing Eve to drain Alice's entire balance.
+/// @dev This is a user-operation risk, not a contract vulnerability.
+/// Mitigation: Approve only the exact amount required for a transaction.
+/// Consider using permit() extensions for gasless approvals.
 contract ApproveScamTest is Test {
     TestERC20 internal token;
 
@@ -46,7 +45,11 @@ contract ApproveScamTest is Test {
         token.transferFrom(alice, eve, INITIAL_SUPPLY);
 
         // Final state
-        console.log("Eve balance after exploit :", token.balanceOf(eve));
+        console.log("Eve balance after exploit:", token.balanceOf(eve));
         console.log("Exploit completed: Alice's funds fully transferred to Eve");
+
+        // Assertions
+        assertEq(token.balanceOf(alice), 0);
+        assertEq(token.balanceOf(eve), INITIAL_SUPPLY);
     }
 }
