@@ -59,7 +59,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/gitctrlx
     - icon: fontawesome/brands/x-twitter
-      link: https://x.com/GitCtrlX
+      link: https://x.com/gitctrlx
 
   generator: false
 
@@ -100,3 +100,4 @@ nav:
       - ApproveScam: ApproveScam.md
       - ArrayDeletion: ArrayDeletion.md
       - BackdoorAssembly: BackdoorAssembly.md
+      - BackdoorAssemblyV2: BackdoorAssemblyV2.md

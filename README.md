@@ -24,7 +24,10 @@ Each demonstration is implemented as a standalone Foundry test in the `test/` di
 
 | Code File                | Documentation File       | Description                                      |
 |--------------------------|--------------------------|--------------------------------------------------|
-| [`test/ApproveScam.t.sol`](test/ApproveScam.t.sol) | [`docs/ApproveScam.md`](docs/ApproveScam.md)    | Over-permissive ERC20 approval risk (unlimited allowance exploitation) |
+| [`test/ApproveScam.t.sol`](test/ApproveScam.t.sol) | [`docs/ApproveScam.md`](docs/ApproveScam.md)    | Over-Permissive Approval Risk in ERC20 Tokens |
+| [`test/ArrayDeletion.t.sol`](test/ArrayDeletion.t.sol) | [`docs/ArrayDeletion.md`](docs/ArrayDeletion.md)    | Improper Array Element Deletion Vulnerability |
+| [`test/BackdoorAssembly.t.sol`](test/BackdoorAssembly.t.sol) | [`docs/BackdoorAssembly.md`](docs/BackdoorAssembly.md)    | Hidden Assembly Backdoor Vulnerability |
+| [`test/BackdoorAssemblyV2.t.sol`](test/BackdoorAssemblyV2.t.sol) | [`docs/BackdoorAssemblyV2.md`](docs/BackdoorAssemblyV2.md)    | Hidden assembly backdoor vulnerability V2 |
 
 ## Inspiration
 
