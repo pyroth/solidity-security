@@ -98,3 +98,5 @@ nav:
   - Home: index.md
   - Vulnerabilities:
       - ApproveScam: ApproveScam.md
+      - ArrayDeletion: ArrayDeletion.md
+      - BackdoorAssembly: BackdoorAssembly.md
