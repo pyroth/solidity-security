@@ -7,8 +7,8 @@ site_description: >-
   and user-operation vulnerabilities in Solidity smart contracts.
 
 # Repository
-repo_url: https://github.com/gitctrlx/solidity-security
-repo_name: gitctrlx/solidity-security
+repo_url: https://github.com/pyroth/solidity-security
+repo_name: pyroth/solidity-security
 
 # Copyright
 copyright: >
@@ -101,3 +101,4 @@ nav:
       - ArrayDeletion: ArrayDeletion.md
       - BackdoorAssembly: BackdoorAssembly.md
       - BackdoorAssemblyV2: BackdoorAssemblyV2.md
+
