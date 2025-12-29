@@ -12,7 +12,7 @@ repo_name: pyroth/solidity-security
 
 # Copyright
 copyright: >
-  Copyright &copy; 2024 - 2025 CtrlX
+  Copyright &copy; Pyroth
 
 # Configuration
 theme:
@@ -101,4 +101,5 @@ nav:
       - ArrayDeletion: ArrayDeletion.md
       - BackdoorAssembly: BackdoorAssembly.md
       - BackdoorAssemblyV2: BackdoorAssemblyV2.md
+
 
